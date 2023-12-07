@@ -9,6 +9,9 @@
     <RepositoryUrl>https://github.com/caunt/Minecraft.Component</RepositoryUrl>
     <PackageTags>minecraft, component, chat, text, json, nbt</PackageTags>
     <PackageId>NET.$(AssemblyName)</PackageId>
+	<AssemblyVersion>1.0.1</AssemblyVersion>
+	<FileVersion>$(AssemblyVersion)</FileVersion>
+	<Version>$(AssemblyVersion)</Version>
   </PropertyGroup>
 
   <ItemGroup>
