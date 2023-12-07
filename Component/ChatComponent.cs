@@ -1,6 +1,8 @@
 using Minecraft.Component.Converters;
 using Minecraft.Component.Event;
+using Minecraft.Component.Serializer;
 using MongoDB.Bson.Serialization.Attributes;
+using SharpNBT;
 using System.ComponentModel;
 using System.Linq;
 using System.Text.Json;
@@ -123,7 +125,7 @@ public class ChatComponent
         JsonSerializerOptions.TypeInfoResolver = new DefaultJsonTypeInfoResolver { Modifiers = { Resolver } };
     }
 
-    protected ChatComponent()
+    public ChatComponent()
     {
         Extra = new ComponentCollection<ChatComponent>(this);
     }
@@ -155,6 +157,16 @@ public class ChatComponent
     public static ChatComponent FromJson(string json)
     {
         return JsonSerializer.Deserialize<ChatComponent>(json, JsonSerializerOptions);
+    }
+
+    public static ChatComponent FromLegacy(string legacy)
+    {
+        return LegacyComponentSerializer.Deserialize(legacy);
+    }
+
+    public static ChatComponent FromNbt(Tag tag)
+    {
+        return NbtComponentSerializer.Deserialize(tag);
     }
 
     private static void Resolver(JsonTypeInfo info)

@@ -5,8 +5,8 @@ namespace Minecraft.Component.Component;
 public class ScoreComponent : ChatComponent
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    [JsonPropertyName("text")]
-    public ScoreData Score { get; }
+    [JsonPropertyName("score")]
+    public ScoreData Score { get; set; }
 
     public ScoreComponent(ScoreData score)
     {

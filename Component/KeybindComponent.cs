@@ -6,7 +6,7 @@ public class KeybindComponent : ChatComponent
 {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonPropertyName("keybind")]
-    public string Keybind { get; }
+    public string Keybind { get; set; }
 
     public KeybindComponent(string keybind) 
     {

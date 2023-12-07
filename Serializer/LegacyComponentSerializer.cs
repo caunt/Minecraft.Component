@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace Minecraft.Component.Chat;
+namespace Minecraft.Component.Serializer;
 
 public enum LegacyTextFormat
 {
@@ -35,7 +35,7 @@ public enum LegacyTextFormat
     RESET = 'r'
 }
 
-public static partial class LegacyComponentSerializer
+public static class LegacyComponentSerializer
 {
     private static Regex DEFAULT_URL_PATTERN = new Regex("(?:(https?)://)?([-\\w_.]+\\.\\w{2,})(/\\S*)?");
     private static Regex URL_SCHEME_PATTERN = new Regex("^[a-z][a-z0-9+\\-.]*:");
