@@ -3,6 +3,12 @@
   <PropertyGroup>
 	<TargetFrameworks>netstandard2.0</TargetFrameworks>
     <OutputType>Library</OutputType>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Minecraft component implementation</Title>
+    <Authors>caunt</Authors>
+    <RepositoryUrl>https://github.com/caunt/Minecraft.Component</RepositoryUrl>
+    <PackageTags>minecraft, component, chat, text, json, nbt</PackageTags>
+    <PackageId>NET.$(AssemblyName)</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
