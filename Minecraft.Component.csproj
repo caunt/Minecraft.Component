@@ -8,11 +8,11 @@
 		<Authors>caunt</Authors>
 		<PackageTags>minecraft, component, chat, text, json, nbt</PackageTags>
 		<PackageId>NET.$(AssemblyName)</PackageId>
-		<FileVersion>$(AssemblyVersion)</FileVersion>
-		<Version>$(AssemblyVersion)</Version>
 		<PackageProjectUrl>https://github.com/caunt/Minecraft.Component</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/caunt/Minecraft.Component</RepositoryUrl>
 		<AssemblyVersion>1.0.2</AssemblyVersion>
+		<FileVersion>$(AssemblyVersion)</FileVersion>
+		<Version>$(AssemblyVersion)</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
