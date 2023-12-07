@@ -1,33 +1,32 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Minecraft.Component.Component
+namespace Minecraft.Component.Component;
+
+public class ScoreComponent : ChatComponent
 {
-    public class ScoreComponent : ChatComponent
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    [JsonPropertyName("text")]
+    public ScoreData Score { get; }
+
+    public ScoreComponent(ScoreData score)
     {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("text")]
-        public ScoreData Score { get; }
-
-        public ScoreComponent(ScoreData score)
-        {
-            Score = score;
-        }
-
-        public static ScoreComponent Create(ScoreData data) => new ScoreComponent(data);
+        Score = score;
     }
 
-    public class ScoreData
-    {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("name")]
-        public string Name { get; set; }
+    public static ScoreComponent Create(ScoreData data) => new ScoreComponent(data);
+}
 
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("objective")]
-        public string Objective { get; set; }
+public class ScoreData
+{
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
 
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        [JsonPropertyName("value")]
-        public string Value { get; set; }
-    }
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    [JsonPropertyName("objective")]
+    public string Objective { get; set; }
+
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
 }

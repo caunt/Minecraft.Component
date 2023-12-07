@@ -3,21 +3,20 @@ using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Minecraft.Component.Converters
+namespace Minecraft.Component.Converters;
+
+public class HoverEventActionConverter : JsonConverter<HoverEventAction>
 {
-    public class HoverEventActionConverter : JsonConverter<HoverEventAction>
+    public override HoverEventAction Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
-        public override HoverEventAction Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
-        {
-            if (reader.TokenType != JsonTokenType.String)
-                throw new InvalidOperationException();
+        if (reader.TokenType != JsonTokenType.String)
+            throw new InvalidOperationException();
 
-            return HoverEventAction.FromName(reader.GetString());
-        }
+        return HoverEventAction.FromName(reader.GetString());
+    }
 
-        public override void Write(Utf8JsonWriter writer, HoverEventAction value, JsonSerializerOptions options)
-        {
-            writer.WriteStringValue(value.ToString());
-        }
+    public override void Write(Utf8JsonWriter writer, HoverEventAction value, JsonSerializerOptions options)
+    {
+        writer.WriteStringValue(value.ToString());
     }
 }
