@@ -1,23 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-	<TargetFrameworks>net7.0</TargetFrameworks>
-    <OutputType>Library</OutputType>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>Minecraft component implementation</Title>
-    <Authors>caunt</Authors>
-    <RepositoryUrl>https://github.com/caunt/Minecraft.Component</RepositoryUrl>
-    <PackageTags>minecraft, component, chat, text, json, nbt</PackageTags>
-    <PackageId>NET.$(AssemblyName)</PackageId>
-	<AssemblyVersion>1.0.1</AssemblyVersion>
-	<FileVersion>$(AssemblyVersion)</FileVersion>
-	<Version>$(AssemblyVersion)</Version>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net7.0</TargetFrameworks>
+		<OutputType>Library</OutputType>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>Minecraft component implementation</Title>
+		<Authors>caunt</Authors>
+		<PackageTags>minecraft, component, chat, text, json, nbt</PackageTags>
+		<PackageId>NET.$(AssemblyName)</PackageId>
+		<AssemblyVersion>1.0.1</AssemblyVersion>
+		<FileVersion>$(AssemblyVersion)</FileVersion>
+		<Version>$(AssemblyVersion)</Version>
+		<PackageProjectUrl>https://github.com/caunt/Minecraft.Component</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/caunt/Minecraft.Component</RepositoryUrl>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="MongoDB.Bson" Version="2.22.0" />
-    <PackageReference Include="SharpNBT" Version="1.3.1" />
-    <PackageReference Include="System.Text.Json" Version="8.0.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MongoDB.Bson" Version="2.22.0" />
+		<PackageReference Include="SharpNBT" Version="1.3.1" />
+		<PackageReference Include="System.Text.Json" Version="8.0.0" />
+	</ItemGroup>
 
 </Project>
