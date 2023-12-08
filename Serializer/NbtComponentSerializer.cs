@@ -12,7 +12,7 @@ public static class NbtComponentSerializer
         if (component is StringComponent stringComponent)
             return new StringTag(name, stringComponent.Text);
 
-        return SerializeCompoundTag(component);
+        return SerializeCompoundTag(component, name);
     }
 
     public static ChatComponent Deserialize(Tag tag)
