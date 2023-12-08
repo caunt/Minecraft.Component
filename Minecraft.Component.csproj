@@ -10,7 +10,7 @@
 		<PackageId>NET.$(AssemblyName)</PackageId>
 		<PackageProjectUrl>https://github.com/caunt/Minecraft.Component</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/caunt/Minecraft.Component</RepositoryUrl>
-		<AssemblyVersion>1.0.3</AssemblyVersion>
+		<AssemblyVersion>1.0.4</AssemblyVersion>
 		<FileVersion>$(AssemblyVersion)</FileVersion>
 		<Version>$(AssemblyVersion)</Version>
 	</PropertyGroup>

@@ -9,6 +9,7 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
+using System.Xml.Linq;
 
 namespace Minecraft.Component.Component;
 
@@ -154,9 +155,9 @@ public class ChatComponent
         return JsonNode.Parse(ToString()).AsObject();
     }
 
-    public Tag ToNbt()
+    public Tag ToNbt(string name = null)
     {
-        return NbtComponentSerializer.Serialize(this);
+        return NbtComponentSerializer.Serialize(this, name);
     }
 
     public static ChatComponent FromJson(string json)

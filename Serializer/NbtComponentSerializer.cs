@@ -7,10 +7,10 @@ namespace Minecraft.Component.Serializer;
 
 public static class NbtComponentSerializer
 {
-    public static Tag Serialize(ChatComponent component)
+    public static Tag Serialize(ChatComponent component, string name = null)
     {
         if (component is StringComponent stringComponent)
-            return new StringTag("text", stringComponent.Text);
+            return new StringTag(name, stringComponent.Text);
 
         return SerializeCompoundTag(component);
     }
