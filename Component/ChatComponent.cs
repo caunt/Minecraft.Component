@@ -154,6 +154,11 @@ public class ChatComponent
         return JsonNode.Parse(ToString()).AsObject();
     }
 
+    public Tag ToNbt()
+    {
+        return NbtComponentSerializer.Serialize(this);
+    }
+
     public static ChatComponent FromJson(string json)
     {
         return JsonSerializer.Deserialize<ChatComponent>(json, JsonSerializerOptions);
